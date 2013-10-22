@@ -1,0 +1,16 @@
+<img id="closeinfo" src="./static/images/core/close.gif" alt="关闭" />
+<div id="bigtab">
+    <div id="bigtitle">$name</div>
+    <div id="biglist">
+        <!--{if isset($list)}-->
+        <div id="floors">$list</div>
+        <div><span class="blue">$timestring</span></div>
+        <!--{/if}-->
+    </div>
+    <div id="infoscroll">
+        <!--{loop $tabs $text}-->
+        $text
+        <!--{/loop}-->
+        <div id="roominfo" class="roommain"></div>
+    </div>
+</div>

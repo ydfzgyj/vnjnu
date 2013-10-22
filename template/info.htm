@@ -1,0 +1,22 @@
+<p><strong class="f16">$room['name']</strong>　　<a id="closeroominfo" href="javascript:;">返回所在楼层图</a></p>
+<p>&nbsp;</p>
+<!--{if $room['type']}-->
+<p>座位数：<strong>$room['seats']</strong>　　空调：<strong><!--{if $room['air']}-->$room['air']台<!--{else}-->无<!--{/if}--></strong></p>
+<p>$room['current']</p>
+<p>&nbsp;</p>
+<!--{/if}-->
+<table id="curriculum">
+    <tr><th></th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th><th>星期六</th><th>星期日</th></tr>
+    <!--{loop $classes $key $class}-->
+    <tr<!--{if $key == 5 || $key == 9}--> style="border-top:2px solid #333;"<!--{/if}-->>
+        <th title="$lesson[$key][1]">$lesson[$key][0]</th>
+        <!--{loop $class $row}-->
+        <!--{if $row == 0}-->
+        <td></td>
+        <!--{elseif $row != -1}-->
+        <td rowspan="$row[0]"<!--{if $row[2]}--> style="background:#f88;"<!--{/if}-->>$row[1]</td>
+        <!--{/if}-->
+        <!--{/loop}-->
+    </tr>
+    <!--{/loop}-->
+</table>

@@ -1,0 +1,52 @@
+$(function() {
+	var html = 
+		'<p><a href="javascript:;" onclick="$(\'#submenu\').empty().hide();">返回首页</a></p>'
+	+	'<p>鼠标取点：<a id="opendraw" href="javascript:;">开</a> <a id="closedraw" href="javascript:;">关</a> <a id="cleardraw" href="javascript:;">清空</a></p>'
+	+	'<p>当前坐标：<span id="valdraw"></span></p>';
+	$('#submenu').html(html).show();
+	$('#opendraw').on('click', function() {
+		var el = null;
+		$('#drag').draggable('disable').css('cursor', 'default');
+		$('#canvas').on({
+			'click': function(e) {
+				var o = $('#canvas').offset();
+				if(el == null) {
+					var path = 'M' + (e.pageX - o.left) + ',' + (e.pageY - o.top) + 'L' + (e.pageX  - o.left) + ',' + (e.pageY - o.top);
+					el = paper.path(path).attr({ stroke: '#f00' });
+				} else {
+					var path = el.attr('path'),
+						len = path.length,
+						newX = e.pageX  - o.left,
+						newY = e.pageY  - o.top;
+					if(newX == path[len - 2][1] && newY == path[len - 2][2] ) return false;
+					path.push([ 'L', newX, newY ]);
+					el.attr({'path': path});
+				}
+			},
+			'mousemove': function(e) {
+				var o = $('#canvas').offset();
+				$('#valdraw').text((e.pageX  - o.left) + ',' + (e.pageY - o.top));
+				if(el == null) return false;
+				var path = el.attr('path'),
+					len = path.length;
+				path[len - 1][1] = e.pageX  - o.left; path[len - 1][2] = e.pageY - o.top;
+				el.attr({'path': path});
+			},
+			'dblclick': function(e) {
+				var path = el.attr('path');
+				path.push('Z');
+				el.attr({'path': path});
+				el = null;
+			}
+		});
+	});
+	$('#closedraw').on('click', function() {
+		$('#drag').draggable('enable').css('cursor', 'url(http://vnjnu.innu.cn/static/images/core/closedhand.cur),default');
+		$('#canvas').off();
+		$('#valdraw').text('');
+	});
+	$('#cleardraw').on('click', function() {
+		var map = new (seajs.require('my/map.js'))();
+		map.hotArea();
+	});
+});

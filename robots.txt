@@ -1,0 +1,11 @@
+# robots.txt for vnjnu
+
+User-agent: *
+
+Disallow: /api/
+Disallow: /cache/
+Disallow: /source/
+Disallow: /template/
+
+User-agent: 360Spider
+Disallow: /

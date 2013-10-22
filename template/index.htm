@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="虚拟南师,南京师范大学,实景地图,课表查询,校车查询" />
+<meta name="description" content="虚拟南师" />
+<meta name="author" content="Yingjian Barrichello Gao" />
+<meta name="copyright" content="2013 Yingjian Barrichello Gao" />
+<title>虚拟南师 - iNNU 南师网络协会</title>
+<!--[if lt IE 9]><script src="./source/script/ex/html5.js"></script><![endif]-->
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="stylesheet" href="./source/script/core.css" />
+<!--[if lte IE 6]><script src="./source/script/ex/pngfix.js"></script><script>DD_belatedPNG.fix('.pngfix,.pngfix a:hover');</script><![endif]-->
+</head>
+<body>
+<header>
+	<img id="mainlogo" src="./static/images/core/logo.gif" />
+	<nav id="nav"><!--{template 'logging.htm'}--></nav>
+</header>
+<aside>
+	<div id="mainmenu" class="dib">
+		<h3>实用功能</h3>
+		<a href="javascript:;" onclick="$.subMenu(4);"><div id="mainmenu4"></div><p>课程查询</p></a>
+		<a href="javascript:;" onclick="$.subMenu(3);"><div id="mainmenu5"></div><p>校车查询</p></a>
+		<a href="javascript:;" onclick="$.showInfo('basic',104);"><div id="mainmenu6"></div><p>常用网址</p></a>
+		<h3>快捷搜索</h3>
+		<a href="javascript:;"><div id="mainmenu7"></div><p>ATM</p></a>
+		<a href="javascript:;"><div id="mainmenu8"></div><p>邮局</p></a>
+		<a href="javascript:;"><div id="mainmenu9"></div><p>医院</p></a>
+		<h3>关于</h3>
+		<a href="javascript:;" onclick="$.subMenu(1);"><div id="mainmenu1"></div><p>南师简介</p></a>
+		<a href="javascript:;" onclick="$.subMenu(2);"><div id="mainmenu2"></div><p>关于</p></a>
+		<a id="ctrlring" href="javascript:;"><div id="mainmenu3"></div><p>关闭铃声</p></a>
+	</div>
+	<div id="submenu"></div>
+	<footer>
+		<strong><span id="time"></span></strong><br />
+		&copy;2013 <a href="http://www.innu.cn/" target="_blank">南京师范大学网络协会</a><br />
+		(<a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备000560号</a>)
+	</footer>
+	<div id="toggleaside" title="收起左栏"><div></div></div>
+</aside>
+<div id="mainmap">
+	<div id="container">
+		<div id="drag">
+			<div id="map"></div>
+            <div id="canvas"></div>
+			<div id="wq" class="cannotdrag">
+				<div id="wqtitle"></div>
+				<div id="wqmain"></div>
+				<div id="wqarrow" class="pngfix"></div>
+				<img id="closewq" src="./static/images/core/close.gif" />
+			</div>
+		</div>
+	</div>
+	<div id="control" class="pngfix">
+		<div id="cleft" title="向左移动"></div>
+		<div id="cright" title="向右移动"></div>
+		<div id="cup" title="向上移动"></div>
+		<div id="cdown" title="向下移动"></div>
+		<div id="czoomin" title="放大"></div>
+		<div id="czoomout" title="缩小"></div>
+		<div id="cscroll" class="pngfix"></div>
+	</div>
+    <div id="mapmode"></div>
+    <span id="switchhotarea" href="javascript:;"><span class="showhotarea"></span> 显示注记</span>
+	<div id="thumbedge">
+		<div id="thumb">
+			<div id="thumbrange"></div>
+            <div id="realthumb"></div>
+			<a id="hidethumb" href="javascript:;"></a>
+		</div>
+	</div>
+	<a id="showthumb" href="javascript:;"></a>
+    <div id="realmap"></div>
+</div>
+<div id="maininfo"></div>
+<div id="ring"></div>
+<script src="./source/script/jq/jq-ui-jp.js"></script>
+<script src="./source/script/ex/raphael-2.1.2.min.js"></script>
+<script src="http://map.soso.com/api/v2/main.js?key=1bed9abb21be16f692041325e5088084"></script>
+<script src="./source/script/sea.js"></script>
+<script src="./source/script/my/init.js"></script>
+</body>
+</html>

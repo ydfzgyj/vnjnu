@@ -1,0 +1,43 @@
+<?php
+
+/*
+ *     虚拟南师 http://vnjnu.innu.cn/
+ *     Barrichello(巴里切罗) <ydfzgyj@baliqieluo.com>
+ *     配置
+ */
+
+if(!defined('VNJNU')) {
+	exit('Access Denied');
+}
+
+$_config = array();
+
+// 数据库服务器设置
+$_config['db']['host'] = '';
+$_config['db']['user'] = '';
+$_config['db']['pw'] = '';
+$_config['db']['name'] = 'vnjnu';
+$_config['db']['charset'] = 'utf8';
+$_config['db']['pconnect'] = 0;
+// 模板设置
+$_config['template']['template_dir'] = '/template';   //指定模板文件存放目录
+$_config['template']['cache_dir'] = '/cache';          //指定缓存文件存放目录
+$_config['template']['auto_update'] = true;           //当模板文件有改动时重新生成缓存 [关闭该项会快一些]
+$_config['template']['cache_lifetime'] = 0;           //缓存生命周期(分钟)，为 0 表示永久 [设置为 0 会快一些]
+// UCenter设置
+define('UC_CONNECT', '');
+define('UC_DBHOST', '');
+define('UC_DBUSER', '');
+define('UC_DBPW', '');
+define('UC_DBNAME', '');
+define('UC_DBCHARSET', '');
+define('UC_DBTABLEPRE', '');
+define('UC_DBCONNECT', '');
+define('UC_KEY', '');
+define('UC_API', '');
+define('UC_CHARSET', '');
+define('UC_IP', '');
+define('UC_APPID', '');
+define('UC_PPP', '');
+
+?>

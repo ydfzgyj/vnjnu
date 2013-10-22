@@ -1,0 +1,162 @@
+/* Reset */
+body,form,h1,h2,h3,h4,p,ol,ul,select{margin:0;}
+body,button,input,select,textarea{font:12px "微软雅黑",Arial,sans-serif;}
+img,iframe,hr{border:none;}
+hr{height:1px;border:none;border-top:1px solid #888;margin:0;*margin:0 0 -14px 0;float:none;*float:left;display:block;}
+ol,ul{list-style:none;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td{vertical-align:top;}
+/* Common Styles */
+a{color:#000;text-decoration:none;}
+	a:hover{text-decoration:underline;}
+body{background:#fff;font-size:14px;line-height:18px;}
+html{height:100%;overflow:hidden;width:100%;}
+.l{text-align:left;}.c{text-align:center;}.r{text-align:right;}
+.grey{color:#888;}.red{color:#f00;}.blue{color:#00f;}
+.bgred{background:#faa;}.bggreen{background:#afa;}.bgwhite{background:#fff;}
+.f12{font-size:12px;}.f16{font-size:16px;}.w100{width:100%;}
+.fl{float:left;}.fr{float:right;}.clear{clear:both;}.inline{display:inline;}.hidden{display:none;}
+.dib{font-size:0;*word-spacing:-1px;}.dib *{font-size:12px;*word-spacing:normal;}
+/* Schema */
+header{border-bottom:1px solid #000;height:60px;overflow:hidden;position:absolute;}
+	#mainlogo{padding-top:5px;}
+	nav{bottom:6px;font-size:12px;position:absolute;right:10px;}
+		.logininput{border:none;border-bottom:1px solid #000;height:20px;padding:0 2px;width:100px;}
+		#loginsubmit{height:24px;margin:0;padding:0;width:110px;}
+        nav img{padding-left:5px;height:36px;width:36px;}
+aside{border-right:1px solid #000;left:0;position:absolute;top:61px;width:219px;z-index:20;}
+	#mainmenu{overflow:hidden;position:relative;}
+		#mainmenu h3{font-size:14px;padding:8px 0 0 10px;}
+		#mainmenu a{display:inline-block;margin-left:12px;}
+			#mainmenu a:hover{text-decoration:none;}
+		#mainmenu div{background-image:url(../../static/images/core/menu.gif);height:55px;margin:1px;width:55px;}
+			#mainmenu1{background-position:-165px 0;}
+			#mainmenu2{background-position:-220px 0;}
+			#mainmenu3{background-position:-165px -55px;}
+			#mainmenu4{background-position:0 0;}
+			#mainmenu5{background-position:-55px 0;}
+			#mainmenu6{background-position:-110px 0;}
+			#mainmenu7{background-position:0 -55px;}
+			#mainmenu8{background-position:-55px -55px;}
+			#mainmenu9{background-position:-110px -55px;}
+		#mainmenu p{font-size:12px;text-align:center;}
+	#submenu{background:#fff;display:none;font-size:16px;left:0;padding:10px 5px 0;position:absolute;top:0;width:209px;}
+		#submenu p{padding:5px 10px;}
+		#bus{padding-top:10px;text-align:center;}
+        #datepicker, #timepicker{border:none;border-bottom:1px solid #888;cursor:pointer;font-size:14px;padding:0;text-align:center;}
+        #datepicker{width:80px;}
+        #timepicker{width:40px;}
+	footer{border-top:1px solid #000;font-size:13px;height:54px;text-align:center;}
+	#toggleaside{background:url(../../static/images/core/mapctrls.gif) -50px -70px;cursor:pointer;height:30px;position:absolute;right:-16px;top:0;width:16px;}
+		#toggleaside div{background:url(../../static/images/core/mapctrls.gif) -57px -100px;height:10px;left:5px;position:absolute;top:6px;width:5px;}
+#mainmap{left:220px;overflow:hidden;position:absolute;top:61px;}
+#container{position:absolute;}
+	#drag{cursor:url(../../static/images/core/openhand.cur),default;height:1536px;left:100px;overflow:hidden;position:absolute;top:120px;width:1536px;}
+		.mapblock{height:256px;position:absolute;width:256px;}
+		#canvas{height:1536px;left:0;position:absolute;top:0;width:1536px;}
+		/* Map Popup */
+		#wq{background:#fff;border:1px solid #999;border-radius:10px;cursor:default;display:none;font-size:12px;height:200px;position:absolute;width:300px;}
+			#wqtitle{border-bottom:1px solid #ccc;font-size:16px;height:30px;line-height:30px;padding:0 15px;}
+			#wqmain{overflow:hidden;padding:9px 15px 11px;}
+				#wqmain a{border:1px solid #aaa;border-radius:3px;display:inline-block;margin:6px 10px 0 0;padding:3px 5px;}
+				#wqmain a:hover{text-decoration:none;}
+			#wqarrow{background:url(../../static/images/core/wq.png);bottom:-31px;left:132px;height:31px;position:absolute;width:51px;}
+			#closewq{cursor:pointer;height:20px;position:absolute;right:5px;top:5px;width:20px;}
+	#control{background:url(../../static/images/core/control.png);height:201px;left:15px;position:absolute;top:10px;width:59px;}
+		#cleft{cursor:pointer;height:18px;left:6px;position:absolute;top:19px;width:12px;}
+		#cright{cursor:pointer;height:18px;left:40px;position:absolute;top:19px;width:12px;}
+		#cup{cursor:pointer;height:18px;left:20px;position:absolute;top:6px;width:18px;}
+		#cdown{cursor:pointer;height:18px;left:20px;position:absolute;top:38px;width:18px;}
+		#czoomin{cursor:pointer;height:66px;left:20px;position:absolute;top:66px;width:18px;}
+		#czoomout{height:66px;left:20px;position:absolute;top:178px;width:18px;}
+		#cscroll{background:url(../../static/images/core/scroll.png);height:15px;left:19px;position:absolute;top:162px;width:20px;}
+    #mapmode{position:absolute;right:10px;top:10px;z-index:2;}
+        #mapmode a{background:#fff;border:1px solid #888;display:inline-block;}
+        #mapmode a:hover{text-decoration:none;}
+        #mapmode div{cursor:pointer;height:50px;margin:2px;position:relative;width:50px;}
+        #mapmode a span{background:#000;bottom:0;filter:alpha(opacity=50);height:18px;left:0;opacity:0.5;position:absolute;width:50px;}
+        #mapmode a:hover span{background:#83a1ff;filter:alpha(opacity=100);opacity:1;}
+        #mapmode em{bottom:0;color:#fff;font-size:12px;font-style:normal;height:18px;left:0;line-height:18px;position:absolute;text-align:center;width:50px;}
+    #switchhotarea{background:#fff;border:1px solid #888;cursor:pointer;font-size:12px;padding:3px 5px 2px 20px;position:absolute;right:10px;top:75px;}
+        #switchhotarea span{display:block;height:12px;left:4px;position:absolute;top:5px;width:12px;}
+        .showhotarea{background:url(../../static/images/core/mapctrls.gif) -50px -42px;}
+        .hidehotarea{background:url(../../static/images/core/mapctrls.gif) -50px -55px;}
+	#thumbedge{background:#fff;border:1px solid #888;bottom:-2px;position:absolute;right:-2px;z-index:2;}
+	#thumb{border:1px solid #888;height:180px;margin:3px 0 0 3px;position:relative;width:180px;}
+		#thumbrange{border:2px solid #00f;cursor:url(../../static/images/core/openhand.cur),default;left:35px;position:absolute;top:82px;}
+        #realthumb{display:none;height:100%;width:100%;}
+		a#hidethumb{background:url(../../static/images/core/mapctrls.gif) -13px 0;bottom:1px;display:block;height:14px;position:absolute;right:1px;width:14px;}
+			a#hidethumb:hover{background:url(../../static/images/core/mapctrls.gif) 0 0;}
+	a#showthumb{background:url(../../static/images/core/mapctrls.gif) -13px -13px;bottom:0;display:none;height:14px;position:absolute;right:0;width:14px;z-index:2;}
+		a#showthumb:hover{background:url(../../static/images/core/mapctrls.gif) 0 -13px;}
+    #realmap{display:none;height:100%;position:relative;width:100%;z-index:1;}
+#maininfo{background:#fff;display:none;left:220px;overflow:hidden;position:absolute;top:61px;z-index:10;}
+	.loading{background:url(../../static/images/core/loading.gif) center center no-repeat;height:100%;width:100%;}
+	#mainiframe{height:100%;width:100%;}
+	#infoscroll{overflow:auto;padding:10px 20px;}
+	#infoscroll a{color:#33f;}
+	#closeinfo{cursor:pointer;position:absolute;right:5px;top:0;width:40px;z-index:100;}
+	.border th, .border td{border:1px solid #000;padding:0 3px;}
+#footer{border-top:1px solid #000;bottom:0;font-size:12px;height:30px;left:0;line-height:16px;position:absolute;vertical-align:top;}
+	#footleft{left:5px;position:absolute;top:0;}
+	#footright{position:absolute;top:0;right:5px;text-align:right;}
+/* info */
+#bigtitle{border-bottom:1px solid #aaa;border-right:1px solid #aaa;color:#f00;font-size:30px;font-weight:bold;height:35px;left:0;line-height:35px;padding:2px 5px 2px 21px;position:absolute;top:0;}
+#biglist{border-bottom:1px solid #aaa;height:39px;padding-right:50px;}
+    #biglist a{outline:none;padding:0 5px;}
+        #biglist a:hover{background:#afa;text-decoration:none;}
+        #biglist a.current{background:#faa;}
+        #biglist a.current:hover{background:#faa;}
+    #biglist span{padding:0 5px;}
+/* room */
+.classroom{font-size:12px;line-height:13px;position:absolute;text-align:center;}
+#roominfo{background:#fff;display:none;}
+#curriculum{border:2px solid #333;height:382px;width:739px;}
+    #curriculum th{border:1px solid #333;vertical-align:middle;}
+	#curriculum td{border:1px solid #333;font-size:12px;height:28px;line-height:13px;overflow:hidden;padding:0;text-align:center;vertical-align:middle;width:100px;}
+/* datetimepicker */
+.ui-datepicker{background:#fff;border:1px solid #888;width:238px;padding:2px 2px 0;display:none;}
+.ui-datepicker .ui-datepicker-header{background:#afa;font-size:12px;font-weight:bold;position:relative;padding:3px 0;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{cursor:pointer;position:absolute;top:2px;width:25px;height:25px;}
+.ui-datepicker .ui-datepicker-prev{left:2px;}
+.ui-datepicker .ui-datepicker-next{right:2px;}
+.ui-datepicker .ui-datepicker-prev-hover{left:1px;top:1px;}
+.ui-datepicker .ui-datepicker-next-hover{right:1px;top:1px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{display:block;position:absolute;left:50%;margin-left:-8px;top:50%;margin-top:-8px;}
+.ui-datepicker .ui-datepicker-title{margin:0 32px;line-height:25px;text-align:center;}
+.ui-datepicker .ui-datepicker-title select{font-size:12px;margin:1px 0;}
+.ui-datepicker select.ui-datepicker-month-year{width:100%;}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{width:40%;}
+.ui-datepicker table{width:100%;font-size:12px;margin:0 0 6px;}
+.ui-datepicker th{padding:6px 4px;}
+.ui-datepicker td{padding:1px;text-align:center;}
+.ui-datepicker td span{border:1px solid #fff;color:#ccc;display:block;padding:1px;}
+.ui-datepicker td a{border:1px solid #ddd;display:block;padding:1px;}
+	.ui-datepicker td a:hover{border:1px solid #999;text-decoration:none;}
+.ui-datepicker .ui-datepicker-buttonpane{padding:0 3px;}
+.ui-datepicker .ui-datepicker-buttonpane button{float:right;margin:4px 3px 6px;cursor:pointer;padding:3px 8px 4px;width:auto;overflow:visible;}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left;}
+
+.ui-timepicker-div dl{margin:0;text-align:left;}
+.ui-timepicker-div dl dt{float:left;clear:left;padding-left:5px;}
+.ui-timepicker-div dl dd{margin:9px 10px 5px 25%;}
+
+.ui-slider{border:1px solid #aaa;border-radius:4px;position:relative;text-align:left;}
+.ui-slider .ui-slider-handle{background:#e6e6e6;border:1px solid #aaa;border-radius:4px;position:absolute;z-index:2;width:1.2em;height:1.2em;cursor:default;}
+.ui-slider-horizontal{height:.8em;}
+.ui-slider-horizontal .ui-slider-handle{top:-.3em;margin-left:-.6em;}
+/* Multipage */
+.multipage{font-size:12px;padding:8px 20px;text-align:right;}
+	h3 .multipage{float:right;font-weight:normal;padding:4px 0;}
+	.multipage a{margin:0 2px;padding:5px;}
+		.multipage a:hover{background:#f2f7fb;border:1px solid #fff;border-color:#e0e7ed #9fb3c6 #92a8bf #dce4eb;margin:0 1px;padding:5px;text-decoration:none;}
+	.multipage strong{background:#f2f7fb;border:1px solid #fff;border-color:#e0e7ed #9fb3c6 #92a8bf #dce4eb;font-size:12px;margin:0 1px;padding:5px;}
+/* Dialog */
+.dialoglock{background:#000;filter:alpha(opacity=30);left:0;opacity:0.3;position:fixed;top:0;}
+.dialogbox{font-size:12px;}
+	.dialogbg{background:#141;border-radius:8px;filter:alpha(opacity=50);height:100%;opacity:0.5;padding:8px;position:absolute;width:100%;}
+	.dialog{background:#fff;left:8px;overflow:hidden;position:relative;top:8px;}
+		.dialog h3{background:#dbe1c7;font-size:14px;padding:3px 8px;}
+		.dialog p{margin-top:3px;}
+	.dialogclose{background:#a6a6a6;border-radius:3px;color:white;cursor:pointer;font:bold 18px/18px Helvetica,STHeiti;height:18px;position:absolute;right:7px;text-align:center;top:7px;width:18px;}
+		.dialogclose:hover{background:#0fa9d7;}
